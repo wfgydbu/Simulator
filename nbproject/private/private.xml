@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/一天/OneDrive/Documents/NetBeansProjects/Project-demo/src/project/demo/Instructions/LDR.java</file>
+            <file>file:/C:/Users/一天/OneDrive/Documents/NetBeansProjects/Project-demo/src/project/demo/Instructions/LDFR.java</file>
+            <file>file:/C:/Users/一天/OneDrive/Documents/NetBeansProjects/Project-demo/src/project/demo/Instructions/LDX.java</file>
+            <file>file:/C:/Users/一天/OneDrive/Documents/NetBeansProjects/Project-demo/src/project/demo/Instructions/AMR.java</file>
+            <file>file:/C:/Users/一天/OneDrive/Documents/NetBeansProjects/Project-demo/src/project/demo/CommonResources.java</file>
+            <file>file:/C:/Users/一天/OneDrive/Documents/NetBeansProjects/Project-demo/src/project/demo/units/adder.java</file>
+            <file>file:/C:/Users/一天/OneDrive/Documents/NetBeansProjects/Project-demo/src/project/demo/Instructions/SIR.java</file>
+            <file>file:/C:/Users/一天/OneDrive/Documents/NetBeansProjects/Project-demo/src/project/demo/EncodeInstructions.java</file>
+            <file>file:/C:/Users/一天/OneDrive/Documents/NetBeansProjects/Project-demo/src/project/demo/Instructions/CHK.java</file>
+            <file>file:/C:/Users/一天/OneDrive/Documents/NetBeansProjects/Project-demo/src/project/demo/Instructions/FSUB.java</file>
+            <file>file:/C:/Users/一天/OneDrive/Documents/NetBeansProjects/Project-demo/src/project/demo/Instructions/STFR.java</file>
+            <file>file:/C:/Users/一天/OneDrive/Documents/NetBeansProjects/Project-demo/src/project/demo/Instructions/JSR.java</file>
+            <file>file:/C:/Users/一天/OneDrive/Documents/NetBeansProjects/Project-demo/src/project/demo/units/LogicOperation.java</file>
+            <file>file:/C:/Users/一天/OneDrive/Documents/NetBeansProjects/Project-demo/src/project/demo/InstructionsList.java</file>
+            <file>file:/C:/Users/一天/OneDrive/Documents/NetBeansProjects/Project-demo/src/project/demo/Instructions/VADD.java</file>
+            <file>file:/C:/Users/一天/OneDrive/Documents/NetBeansProjects/Project-demo/src/project/demo/Instructions/AIR.java</file>
+            <file>file:/C:/Users/一天/OneDrive/Documents/NetBeansProjects/Project-demo/src/project/demo/Instructions/STR.java</file>
+            <file>file:/C:/Users/一天/OneDrive/Documents/NetBeansProjects/Project-demo/src/project/demo/UIInterface.java</file>
+            <file>file:/C:/Users/一天/OneDrive/Documents/NetBeansProjects/Project-demo/src/project/demo/ExecuteInstructions.java</file>
+            <file>file:/C:/Users/一天/OneDrive/Documents/NetBeansProjects/Project-demo/src/project/demo/Instructions/FADD.java</file>
+            <file>file:/C:/Users/一天/OneDrive/Documents/NetBeansProjects/Project-demo/src/project/demo/Instructions/CNVRT.java</file>
+            <file>file:/C:/Users/一天/OneDrive/Documents/NetBeansProjects/Project-demo/src/project/demo/Instructions/VSUB.java</file>
+            <file>file:/C:/Users/一天/OneDrive/Documents/NetBeansProjects/Project-demo/src/project/demo/Instructions/HLT.java</file>
+            <file>file:/C:/Users/一天/OneDrive/Documents/NetBeansProjects/Project-demo/src/project/demo/Instructions/JZ.java</file>
+            <file>file:/C:/Users/一天/OneDrive/Documents/NetBeansProjects/Project-demo/src/project/demo/ErrorControl.java</file>
+            <file>file:/C:/Users/一天/OneDrive/Documents/NetBeansProjects/Project-demo/src/project/demo/Instructions/LDA.java</file>
+            <file>file:/C:/Users/一天/OneDrive/Documents/NetBeansProjects/Project-demo/src/project/demo/Instructions/JCC.java</file>
+        </group>
+    </open-files>
+</project-private>

@@ -1,0 +1,247 @@
+-- Program #2 description: A program that reads a set of a paragraph of 6 sentences from a file into memory.
+-- It prints the sentences on the console printer.
+-- It then asks the user for a word.
+-- It searches the paragraph to see if it contains the word.
+-- If so, it prints out the word, the sentence number, and the word number in the sentence.
+
+-- Usage of the MEM Location:
+-- 0
+-- 1  point for data 
+-- 2  point for word
+-- 3  '#'
+-- 4  '@'
+-- 5  ' '
+-- 6  result: position
+-- 7  result: line
+-- 8  start of word = 15
+-- 9  start of data = 2000
+-- 10 
+-- 11 
+-- 12 
+-- 13 
+-- 14 
+-- 15 - 30  word
+-- 31  
+
+** Program name: search of word
+** Phases to operate this program:
+** (1) Follow the file selection window to choose "file.txt" file， and there's another choice contains shorter sentences in 'file-short.txt'
+** (2) Then, the printer window will print 6 sentences; 
+** (3) Follow the instruction to enter a word that you want to search and the word will be displayed on the screen with symbols '#';
+** (4) After a period of time for calculation, the position of this specific word will be displayed on the screen. The first number is the sentence number and the second number is the position of this word in this sentence. Both of numbers are also with symbol ‘#’.
+** Note:
+** (1) If you searched the last word in there senteces, it will take about 10 mins for the longer file and 3 mins for the short file.
+
+-- clear R0-R3
+STR 0,0,0
+SMR 0,0,0
+STR 1,0,0
+SMR 1,0,0
+STR 2,0,0
+SMR 2,0,0
+STR 3,0,0
+SMR 3,0,0
+
+
+-- input file
+AIR 0,1
+SRC 0,11,1,0
+SIR 0,30
+SIR 0,18
+IN 0,8
+
+-- set start of data
+STR 0,0,9
+
+-- input word
+STR 0,0,0
+SMR 0,0,0
+AIR 0,15
+IN 0,9
+
+-- set start of word
+STR 0,0,8
+
+-- initial counters
+-- set 1: point for data
+LDR 0,0,9
+STR 0,0,1
+-- set 2: point for word
+LDR 0,0,8
+STR 0,0,2
+
+STR 0,0,0
+SMR 0,0,0
+-- set 5: ' '
+AIR 0,30
+AIR 0,2
+STR 0,0,5
+
+-- set 3: '#'
+AIR 0,3
+STR 0,0,3
+
+-- set 4: '@'
+AIR 0,29
+STR 0,0,4
+
+STR 0,0,0
+SMR 0,0,0
+
+-- set 6: result: position
+AIR 0,1
+STR 0,0,6
+
+-- set 7: result: line
+STR 0,0,7
+
+STR 0,0,0
+SMR 0,0,0
+
+-- comparison
+-- loop0 compare
+-- store PC to M(11)
+IN 3,7
+SIR 3,8
+STR 3,0,11
+SIR 3,13
+STR 3,0,10
+SIR 3,21
+SIR 3,30
+STR 3,0,31
+
+LDR 1,0,1,1
+SMR 1,0,2,1
+JNE 1,0,10,1
+LDR 0,0,1
+AIR 0,1
+STR 0,0,1
+LDR 0,0,2
+AIR 0,1
+STR 0,0,2
+LDR 0,0,2,1
+SMR 0,0,3
+JZ 0,0,31,1
+JMA 0,11,1
+
+-- loop1 move to the next word
+-- data++ M(10)
+LDR 2,0,1
+AIR 2,1
+STR 2,0,1
+
+IN 3,7
+SIR 3,14
+STR 3,0,12
+SIR 3,9
+STR 3,0,13
+SIR 3,16
+STR 3,0,14
+
+-- check if equal space
+LDR 1,0,1,1
+SMR 1,0,5
+JZ 1,0,12,1
+
+-- check if equal '#'
+LDR 1,0,1,1
+SMR 1,0,3
+JZ 1,0,13,1
+JMA 0,10,1
+
+-- M(12) for space
+LDR 0,0,6
+AIR 0,1
+STR 0,0,6
+LDR 2,0,1
+AIR 2,1
+STR 2,0,1
+LDR 2,0,8
+STR 2,0,2
+JMA 0,11,1
+
+-- M(13) for #
+-- next if '@'?
+LDR 2,0,1
+AIR 2,1
+STR 2,0,1
+LDR 1,0,1,1
+SMR 1,0,4
+JZ 1,0,14,1
+LDR 0,0,6
+SMR 0,0,6
+AIR 0,1
+STR 0,0,6
+LDR 0,0,7
+AIR 0,1
+STR 0,0,7
+LDR 1,0,8
+STR 1,0,2
+JMA 0,11,1
+
+-- M(14) for @
+-- OVER, display the result.
+-- not found, print a @
+IN 3,7
+SIR 3,30
+SIR 3,16
+STR 3,0,10
+
+STR 0,0,0
+SMR 0,0,0
+LDR 0,0,4
+OUT 0,1
+JMA 0,10,1
+
+-- find
+-- print the word
+IN 3,7
+SIR 3,11
+STR 3,0,11
+SIR 3,9
+STR 3,0,10
+
+STR 0,0,0
+SMR 0,0,0
+LDR 0,0,3
+OUT 0,1
+LDR 1,0,8
+STR 1,0,2
+LDR 1,0,2,1
+LDR 2,0,2,1
+SMR 2,0,3
+JZ 2,0,10,1
+OUT 1,1
+LDR 3,0,2
+AIR 3,1
+STR 3,0,2
+JMA 0,11,1
+
+STR 0,0,0
+SMR 0,0,0
+AIR 0,10
+OUT 0,1
+
+-- print result
+STR 0,0,0
+SMR 0,0,0
+STR 1,0,0
+SMR 1,0,0
+AIR 1,10
+LDR 0,0,3
+OUT 0,1
+LDR 2,0,7
+OUT 2,0
+OUT 1,1
+OUT 0,1
+LDR 2,0,6
+OUT 2,0
+OUT 1,1
+
+
+
+
+
+
+
+
